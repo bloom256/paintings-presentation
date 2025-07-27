@@ -6,21 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paintings Presentation</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background-color: #f0f0f0; }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; 
+            background-color: #e0e0e0; /* Slightly darker background */
+            line-height: 1.6;
+            color: #333;
+        }
+        #presentation {
+            max-width: 800px; /* Limit content width for readability */
+            margin: 20px auto; /* Center the content with some top/bottom margin */
+            padding: 0 15px; /* Add some horizontal padding */
+        }
         .painting-section { 
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid #ccc;
+            padding: 30px; /* Increased padding */
+            margin-bottom: 30px; /* Space between sections */
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 8px; /* Soften corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            text-align: center;
         }
         .painting-section img { 
-            max-width: 80%; 
-            max-height: 60vh; 
+            max-width: 90%; /* Slightly larger images within section */
+            max-height: 65vh; /* Slightly taller images */
+            margin-bottom: 20px; /* More space below image */
+            border-radius: 4px; /* Soften image corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        .painting-section h2 { 
+            margin: 0 0 10px 0; /* Space below title */
+            font-size: 1.8em; /* Larger title */
+            color: #222;
+        }
+        .painting-section p { 
+            margin: 5px 0; 
+            font-size: 1.1em; /* Slightly larger text */
+            max-width: 600px; /* Limit paragraph width for readability */
+        }
+        .painting-section p:nth-of-type(1) { /* Artist and year */
+            font-weight: bold;
+            color: #555;
             margin-bottom: 15px;
         }
-        .painting-section h2 { margin: 0; }
-        .painting-section p { margin: 5px 0; }
+        .painting-section a {
+            display: inline-block; /* Allows padding and margin */
+            margin-top: 20px; /* Space above link */
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        .painting-section a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
     </style>
 </head>
 <body>
